@@ -1,0 +1,48 @@
+{% extends '_base.html' %}
+
+{% block text %}
+    Post List
+{% endblock  %}
+
+{% block content %}
+    <body>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-9">
+                {% for post in all_post %}
+                    <div class="card shadow my-3 p-5">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ post.title }}</h5>
+<!--                            {{ post.id }}-->
+                            <h6 class="card-subtitle mb-2 text-muted small py-2">By: {{ post.author }}</h6>
+                            <p class="card-text py-3">
+                                {{ post.text }}
+                            </p>
+                            <a href="{% url 'post_detail' post.id %}" class="btn btn-sm btn-success">Read More</a>
+<!--                            <a href="{% url 'post_update' post.id %}" class="btn btn-sm btn-warning">Edit</a>-->
+<!--                            <a href="{% url 'post_delete' post.id %}" class="btn btn-sm btn-danger">delete</a>-->
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="col-3">
+
+                <div class="card my-4">
+                    <h5 class="card-header">About</h5>
+                    <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1860850/capsule_616x353.jpg?t=1643813508"
+                    class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">We love python and django. So we created a blog site to share our
+                            thoughts</p>
+                        <a href="#"
+                           class="btn btn-sm btn-danger">
+                            More...
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </body>
+{% endblock %}

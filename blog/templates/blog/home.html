@@ -1,0 +1,68 @@
+{% extends '_base.html' %}
+
+
+{% block text %}
+home page
+{% endblock  %}
+
+{% block content %}
+<div class="container mt-4">
+
+    <div class="row">
+        <div class="d-grid gap-5 col-9 mx-auto mt-4">
+            <a href="{% url 'post_list' %}" class="btn btn-primary" type="button">Post List</a>
+            <a href="{% url 'post_create' %}" class="btn btn-primary" type="button">New post</a>
+        </div>
+        <div class="col-3">
+            <div class="card my-4">
+                <h5 class="card-header">About</h5>
+                <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1860850/capsule_616x353.jpg?t=1643813508"
+                     class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">We love python and django. So we created a blog site to share our
+                        thoughts</p>
+                    <a href="#"
+                       class="btn btn-sm btn-danger">
+                        More...
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="accordion mt-4" id="accordionExample">
+        <div class="accordion-item mt-2">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                        aria-expanded="true" aria-controls="collapseOne">
+                    Entropy
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                 data-bs-parent="#accordionExample">
+                <div class="accordion-body overflow-auto">
+                    <p>
+                        <strong>This is the first item's accordion body.</strong> Entropy is a scientific concept as
+                        well as
+                        a measurable physical property
+                        that is most commonly associated with a state of disorder, randomness, or uncertainty. The term
+                        and
+                        the concept are used in diverse
+                        fields, from classical thermodynamics, where it was first recognized, to the microscopic
+                        description
+                        of nature in statistical physics,
+                        and to the principles of information theory. It has found far-ranging applications in chemistry
+                        and
+                        physics, in biological systems and
+                        their relation to life, in cosmology, economics, sociology, weather science, climate change, and
+                        information systems including the transmission
+                        <code>of information</code>,in telecommunication.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+</div>
+{% endblock %}
