@@ -2,4 +2,4 @@
 venv/
 .vscode/
 __pycash__/
-python
+/python
