@@ -74,6 +74,10 @@ def home_page(request):
     return render(request, 'blog/home.html')
 
 
+def about_us(request):
+    return render(request, 'blog/about_us.html')
+
+
 # def post_update_view(request, pk):
 #     # post = Post.objects.get(pk=pk)
 #     post = get_object_or_404(Post, pk=pk)
@@ -96,7 +100,6 @@ def post_delete_view(request, pk):
         return redirect('post_list')
 
     return render(request, 'blog/post_delete.html', context={'post': post})
-
 
 # class PostDeleteView(generic.DetailView):
 #     model = Post
